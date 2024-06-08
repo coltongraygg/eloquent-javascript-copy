@@ -26,10 +26,13 @@ LOGS =>
 
 */
 
-function triangles() {
-  
+function triangles(size) {
+  let triangle = '';
+  for (let i = 0; i < size; i++) {
+    triangle += '#';
+    console.log(triangle);
+  }
 }
-
 
 ////////////////////////////////////////////////////////////////////////////////
 // fizzBuzz ////////////////////////////////////////////////////////////////////
@@ -48,6 +51,17 @@ on the number:
 */
 
 function fizzBuzz(start, end) {
+  for (let i = start; i <= end; i++) {
+    if (i % 3 === 0 && i % 5 === 0) {
+      console.log('fizzbuzz');
+    } else if (i % 3 === 0) {
+      console.log('fizz');
+    } else if (i % 5 === 0) {
+      console.log('buzz');
+    } else {
+      console.log(i);
+    }
+  }
   
 }
 
@@ -81,11 +95,35 @@ LOGS =>
 
 */
 
-function drawChessboard(x) {
+function drawChessboard(size) {
+  let chessBoard = '';
 
+  for (let y = 0; y < size; y++) {
+    for (let x = 0; x < size; x++) {
+      if ((x + y) % 2 === 0) {
+        chessBoard += ' ';
+      } else {
+        chessBoard += '#';
+      }
+    }
+    chessBoard += '\n';
+  }
 
+  console.log(chessBoard);
 }
 
+
+
+////////////////////////////////////////////////////////////////////////////////
+// DON'T REMOVE THIS CODE //////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
+if ((typeof process !== 'undefined') &&
+  (typeof process.versions.node !== 'undefined')) {
+  module.exports = {
+    drawChessboard
+  };
+}
 ////////////////////////////////////////////////////////////////////////////////
 // DON'T REMOVE THIS CODE //////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////

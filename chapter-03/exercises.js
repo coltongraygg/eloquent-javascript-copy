@@ -2,31 +2,72 @@
 // min /////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
-function min() {
+/**
+ * I: FUNCTION RECEIVES TWO NUMERICAL DATA VALUES
+ * O: FUNCTION RETURNS THE MINIMUM NUMBER
+ * C: FUNCTION EXPECTS TO RECEIVE A NUMBER
+ * E: N/A
+ */
 
+function min(x, y) {
+  return Math.min(x, y);
 }
 
 ////////////////////////////////////////////////////////////////////////////////
 // isEven //////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
-function isEven() {
+/**
+ * I: FUNCTION RECEIVES A NUMERICAL DATA VALUE
+ * O: FUNCTION RETURNS TRUE IF EVEN, FALSE OTHERWISE
+ * C: FUNCTION EXPECTS TO RECEIVE A NUMBER
+ * E: N/A
+ */
 
+function isEven(x) {
+  if (x % 2 === 0) {
+    return true;
+  } else {
+    return false;
+  }
 }
-
 ////////////////////////////////////////////////////////////////////////////////
 // countChars //////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
-function countChars() {
+/**
+ * I: FUNCTION RECEIVES TWO PARAMS. A STRING AND A CHAR
+ * O: FUNCTION RETURNS THE AMOUNT OF TIMES CHAR IS FOUND IN STRING
+ * C: FUNCTION EXPECTS TO RECEIVE TWO STRINGS, ONE OF WHICH HAS A SINGLE CHARACTER
+ * E: N/A
+ */
 
+function countChars(string, char) {
+  // create count variable
+  let count = 0;
+  // iterate through string
+  for (let i = 0; i < string.length; i++) {
+    // if string[i] === char...
+    if (string[i] === char) {
+      // increase value of count + 1
+      count++
+    }
+    // return count
+  } return count;
 }
 
 ////////////////////////////////////////////////////////////////////////////////
 // countBs /////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
-function countBs() {
+function countBs(string) {
+  let count = 0;
+  for (let i = 0; i < string.length; i++) {
+    if (string[i] === 'B') {
+      count++
+    }
+  }
+  return count;
 
 }
 
