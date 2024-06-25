@@ -60,6 +60,13 @@ function countChars(string, char) {
 // countBs /////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
+/**
+ * I: FUNCTION RECEIVES A STRING
+ * O: FUNCTION RETURNS A NUMBER REPRESENTING THE AMOUNT OF TIMES THE LETTER B IS IN STRING
+ * C: N/A
+ * E: N/A
+ */
+
 function countBs(string) {
   let count = 0;
   for (let i = 0; i < string.length; i++) {
