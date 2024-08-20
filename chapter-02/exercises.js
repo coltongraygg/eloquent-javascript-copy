@@ -26,8 +26,14 @@ LOGS =>
 
 */
 
-function triangles() {
-  
+function triangles(size) {
+  let hashtag = '#';
+  // iterate
+  for (let i = 0; i < size; i++) {
+    // log and add # to hashtag value for next iteration
+    console.log(hashtag);
+    hashtag += '#';
+  }
 }
 
 
@@ -48,7 +54,22 @@ on the number:
 */
 
 function fizzBuzz(start, end) {
-  
+  // iterate from start to end
+  for (let i = start; i <= end; i++) {
+    // if i is divisible by 3 & 5
+    if (i % 3 === 0 && i % 5 === 0) {
+      console.log('fizzbuzz');
+      // if i is divisible by 5
+    } else if (i % 5 === 0) {
+      console.log('buzz');
+      // if i is divisible by 3
+    } else if (i % 3 === 0) {
+      console.log('fizz');
+      // if none of the above statements execute, log value of i
+    } else {
+      console.log(i);
+    }
+  }
 }
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -79,12 +100,35 @@ LOGS =>
 # #
  #
 
+
+ thinking this out...
+ on first iteration my function does
+ ' # #'
+
 */
 
-function drawChessboard(x) {
+function drawChessboard(size) {
+  let chessboard = '';
 
-
+  // traverse the y axis of the chessboard
+  for (let y = 0; y < size; y++) {
+    // traverse the x axis on each iteration
+    for (let x = 0; x < size; x++) {
+      // if x and y are even, their sum will be even & if x and y are odd, their sum will also be even
+      if ((x + y) % 2 === 0) {
+        // add an empty space to the chessboard
+        chessboard += ' ';
+      // otherwise, add a hashtag to the board
+      } else {
+        chessboard += '#'
+      }
+    }
+    // on each iteration of the y axis add a newline
+    chessboard += '\n';
+  }
+  console.log(chessboard);
 }
+
 
 ////////////////////////////////////////////////////////////////////////////////
 // DON'T REMOVE THIS CODE //////////////////////////////////////////////////////
